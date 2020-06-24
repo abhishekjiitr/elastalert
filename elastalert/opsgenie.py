@@ -175,7 +175,7 @@ class OpsGenieAlerter(Alerter):
 
             if type(value) is dict:
                 if 'field' in value:
-                    field_value = lookup_es_key(matches[0], value['field'])
+                    field_value = lookup_es_key(matches[0], value)
                     if field_value is not None:
                         details[key] = str(field_value)
 
